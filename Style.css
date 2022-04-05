@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Julius+Sans+One&family=Khand&family=Lato&family=Playfair+Display&family=Staatliches&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* *********************** NAVBAR ************************** */
+header nav {
+    overflow: hidden;
+    background: #f1f1f1;
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+    opacity: 0.8;
+    top: 0;
+    align-items: center;
+    color: black;
+}
+
+#Logo {
+    float: left;
+    padding-top: 2.5px;
+    padding-left: 25px;
+}
+
+.toogle {
+    display: none;
+}
+
+header li {
+    float: right;
+}
+
+header li a {
+    text-decoration: none;
+    display: block;
+    padding: 0px 5px;
+    float: right;
+    padding-top: 15px;
+}
+
+/* ********************* IMAGE PRINCIPALE ****************** */
+#imagePrincipale {
+    padding-top: 70px;
+    background: url(media/Plantation\ café\ homme.png) no-repeat fixed 50% 50%;
+    background-size: cover;
+    height: 799px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#premierTrait {
+    height: 2.5px;
+    width: 25%;
+    margin: -3px auto;
+    background-color: #FFFFFF;
+    box-shadow: 1px 3px 2px #000;
+}
+
+h3 {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 3em;
+    text-shadow: 1px 3px 2px #000;
+}
+
+/* ********************** PRESENTATION ************************ */
+#presentation {
+    background-color: #f1f1f1;
+    padding: 10px 0px 0px 0px;
+}
+
+#textIntro h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+#textIntro {
+    padding: 0px 20%;
+}
+
+.cards {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+    width: 100%;
+    max-width: 3000px;
+    grid-gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    position: relative;
+    padding-bottom: 150%;
+    margin-bottom: 50px;
+}
+
+.card-background {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    filter: brightness(.75) saturate(1.2) contrast(.85);
+    transition: .3s;
+}
+
+.card-content {
+    position: absolute;
+    padding: 24px;
+    color: #FFFFFF;
+    font-family: 'Khand', sans-serif;
+    font-size: 1.5em;
+}
+
+.card-content p {
+    color: rgba(255, 255, 255, .6);
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.card-content h4 {
+    font-size: 1.9rem;
+    color: rgba(255, 255, 255, .9);
+    margin-top: 1rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
+
+.card:hover .card-background {
+    transform: scale(1.05);
+}
+
+.cards:hover>.card:not(:hover)>.card-background {
+    filter: brightness(.5) saturate(0) contrast(1.2) blur(1px);
+}
+
+/* ******************* FOOTER ******************* */
+footer {
+    background-color: #524A3A;
+    color: #FFFFFF;
+    padding: 20px 0px 10px 0px;
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+input,
+textarea,
+button {
+    border: none;
+    width: 55%;
+    padding: 15px 10px;
+    margin: 1px 0;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 120px;
+}
+
+button {
+    font-size: 1em;
+    background-color: #FFFAE1;
+}
+
+button:hover {
+    background-color: #e55039;
+    color: #FFFAE1;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#deuxiemeTrait {
+    height: 1px;
+    width: 75%;
+    background-color: #FFFFFF;
+    margin: 60px auto;
+}
+
+#copyrightEtIcons {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+
+#copyright {
+    width: 50%;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#icons {
+    width: 50%;
+    text-align: right;
+}
+
+#icons a {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 1.3em;
+    color: #FFFFFF;
+}
+
+#icons a:hover {
+    transform: scale(1.5);
+    transition: 0.1s;
+}
